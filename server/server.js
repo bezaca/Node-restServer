@@ -20,7 +20,8 @@ app.use(require('./routes/usuario')); // import usuarios
 
 mongoose.connect(process.env.URLDB, {
   useNewUrlParser: true,
-
+  useUnifiedTopology: true,
+  useFindAndModify: false,
   useCreateIndex: true
 }, (err, res) => {
   if (err) throw err;
