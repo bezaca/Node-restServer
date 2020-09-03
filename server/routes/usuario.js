@@ -19,7 +19,7 @@ app.get('/usuario', function (req, res) {
     let limite = req.query.limit || 5;
     limite = Number(limite);
 
-    Usuario.find({ estado: true }) //encontrar todos los elementos 
+    Usuario.find({}) //encontrar todos los elementos 
         .skip(desde) // se salta los primeros 5 registros  
         .limit(limite) // limite para busqueda
         .exec((err, usuarios) => {
@@ -31,7 +31,7 @@ app.get('/usuario', function (req, res) {
                 });
             }
 
-            Usuario.count({ estado: true }, (err, conteo) => {
+            Usuario.countDocuments({}, (err, conteo) => {
 
                 res.json({
 
