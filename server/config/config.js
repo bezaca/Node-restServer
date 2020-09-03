@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === 'dev') {
 
 } else {
 
-    urlDB = 'mongodb+srv://fcabeza:<gW8B0G9fd1Lfv0WH>@cluster0.vjn7t.mongodb.net/';
+    urlDB = 'mongodb+srv://fcabeza:<gW8B0G9fd1Lfv0WH>@cluster0.vjn7t.mongodb.net/test';
 }
 
 process.env.URLDB = urlDB;
